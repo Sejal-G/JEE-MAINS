@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JEE MAINS PAPER</title>
+  </head>
+  <body>
+    <!-- change this---------------------------------------------------------------- -->
+    <h1>Jee Mains Paper - </h1>
+
+<p id="demo"></p>
+<script>
+    // CHANGE THIS-------------------------------------------------------------------
+    var countDownDate = new Date("Dec 26, 2020 24:00:00").getTime();  
+    
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+</script>
+
+<!-- change this----------------------------------------------------------------------------------- -->
+    <iframe src="C:\Users\DELL\Desktop\dr. gupta\Print\KVPY Online Schedule for XII Class-1.pdf#toolbar=0" frameborder="0" width="75%" height="540px" align="left"></iframe>
+    <!-- <p>Open a PDF file <a href="C:\Users\DELL\Desktop\dr. gupta\Print\KVPY Online Schedule for XII Class-1.pdf">example</a>.</p> -->
+
+    <iframe src="E:\omr.html" frameborder="0" width="25%" height="540px" align="right"></iframe>
+    
+
+    
+
+  </body>
+</html>
