@@ -92,17 +92,78 @@ INTEGER TYPE
 
 <Script>
 function func(){
-    var ans=[];
+    var ans=[
+    'D',
+    'C',
+    'B',
+    'A',
+    'C',
+    'C',
+    'A',
+    'B',
+    'C',
+    'D',
+    'B',
+    'A',
+    'A',
+    'B',
+    'B',
+    'C',
+    'B',
+    'D',
+    'B',
+    'C',
+
+    'D',
+    'A',
+    'C',
+    'C',
+    'B',
+    'D',
+    'D',
+    'B',
+    'D',
+    'B',
+    'C',
+    'D',
+    'C',
+    'C',
+    'A',
+    'B',
+    'C',
+    'B',
+    'B',
+    'B',
+
+    'D',
+    'C',
+    'B',
+    'B',
+    'C',
+    'C',
+    'B',
+    'C',
+    'A',
+    'D',
+    'B',
+    'D',
+    'C',
+    'D',
+    'D',
+    'B',
+    'A',
+    'D',
+    'C',
+    'B'];
     var radios = document.getElementsByName('option');
     var attempted = 0;
     for (var x = 0, length = radios.length; x < length; x++) {
-        ans[x]='A';
+        
         if (radios[x].checked) {
             // do whatever you want with the checked radio
             // alert(radios[x].value);
             arr[x] = radios[x].value;
             attempted++;
-            console.log()
             // only one radio can be logically checked, don't check the rest
             // break;
         }
