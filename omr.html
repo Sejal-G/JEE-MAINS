@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>  
+
+    
+    <style>
+        .button {
+          background-color: #4c90af;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+    </style>
+
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -8,13 +26,16 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    
-    
+    <p align="right">    <button class="button" id="submit" onClick="func()">Submit!</button> </p>
+<script>
+    var arr = [];
+</script>  
 <b>PHYSICS</b>
 <br>
 <script>
 for(var i = 1; i <= 20; i++) {
-    document.body.innerHTML += "Q" + i + '<div class="container"><form><label class="radio-inline"><input type="radio" name="option" id=i>A</label><label class="radio-inline"><input type="radio" name="option" id=i>B</label><label class="radio-inline"><input type="radio" name="option" id=i>C</label><label class="radio-inline"><input type="radio" id=i name="option">D</form></div>'}
+    document.body.innerHTML += "Q" + i + '<div class="container"><form><label class="radio-inline"><input type="radio" name="option" onClick="handleClick(this)" value="A">A</label><label class="radio-inline"><input type="radio" name="option" onClick="handleClick(this)" value="B">B</label><label class="radio-inline"><input type="radio" name="option" onClick="handleClick(this)" value="C">C</label><label class="radio-inline"><input type="radio" name="option" onClick="handleClick(this)" value="D">D</form></div>'}
+    // arr[i-1] = document.getElementsByName()
 </script>
 <hr>
 INTEGER TYPE
@@ -33,7 +54,7 @@ INTEGER TYPE
 <br>
 <script>
 for(var i = 26; i < 46; i++) {
-    document.body.innerHTML += "Q" + i + '<div class="container"><form><label class="radio-inline"><input type="radio" name="option">A</label><label class="radio-inline"><input type="radio" name="option">B</label><label class="radio-inline"><input type="radio" name="option">C</label><label class="radio-inline"><input type="radio" name="option">D</form></div>'}
+    document.body.innerHTML += "Q" + i + '<div class="container"><form><label class="radio-inline"><input type="radio" name="option" onClick="handleClick(this)" value="A">A</label><label class="radio-inline"><input type="radio" name="option" onClick="handleClick(this)" value="B">B</label><label class="radio-inline"><input type="radio" name="option" onClick="handleClick(this)" value="C">C</label><label class="radio-inline"><input type="radio" name="option" onClick="handleClick(this)" value="D">D</form></div>'}
 </script>
 <hr>
 INTEGER TYPE
@@ -52,7 +73,7 @@ INTEGER TYPE
 <br>
 <script>
 for(var i = 51 ; i <= 70; i++) {
-    document.body.innerHTML += "Q" + i + '<div class="container"><form><label class="radio-inline"><input type="radio" name="option">A</label><label class="radio-inline"><input type="radio" name="option">B</label><label class="radio-inline"><input type="radio" name="option">C</label><label class="radio-inline"><input type="radio" name="option">D</form></div>'}
+    document.body.innerHTML += "Q" + i + '<div class="container"><form><label class="radio-inline"><input type="radio" name="option" onClick="handleClick(this)" value="A">A</label><label class="radio-inline"><input type="radio" name="option" onClick="handleClick(this)" value="B">B</label><label class="radio-inline"><input type="radio" name="option" onClick="handleClick(this)" value="C">C</label><label class="radio-inline"><input type="radio" name="option" onClick="handleClick(this)" value="D">D</form></div>'}
 </script>
 <hr>
 INTEGER TYPE
@@ -64,6 +85,46 @@ INTEGER TYPE
     Q.75. <input type = "text" id="integer_type5"><br><br>
 
 </form>
+
+<script>
+    function handleClick(option) {}
+</Script>
+
+<Script>
+function func(){
+    var ans=[];
+    var radios = document.getElementsByName('option');
+    var attempted = 0;
+    for (var x = 0, length = radios.length; x < length; x++) {
+        ans[x]='A';
+        if (radios[x].checked) {
+            // do whatever you want with the checked radio
+            // alert(radios[x].value);
+            arr[x] = radios[x].value;
+            attempted++;
+            console.log()
+            // only one radio can be logically checked, don't check the rest
+            // break;
+        }
+        else{
+            arr[x] = 'N';
+        }
+    }
+    
+    var correct=0;var wrong=0;
+//CHANGE THIS----------------------------------------------------------checking answers
+    for (var x = 0, length = radios.length; x < length; x++) {
+        if (arr[x] == ans[x]) {
+            correct++;
+        }
+        else{
+            wrong++;
+        }
+    }
+    alert("Attempted: " + attempted + " \n" + "Correct: " + correct + " ");
+}
+
+</script>
 
 
 </body>
